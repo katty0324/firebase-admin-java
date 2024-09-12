@@ -90,7 +90,7 @@ public final class ApacheHttp2Transport extends HttpTransport {
 
   @Override
   public void shutdown() throws IOException {
-//    httpAsyncClient.close(CloseMode.GRACEFUL);
+    httpAsyncClient.close(CloseMode.IMMEDIATE);
   }
 
   public HttpAsyncClient getHttpClient() {
